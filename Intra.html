@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)https://intra.intek.io/projects/lgit/subject#core-project-84d02d0d-e450-447a-aed3-de5b9ca74fb9 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="./Intra_files/application-4969faf289a1b4b5e3e623a5153393d0a282fa64c57bfe208a3d205c9e510551.css">
+
+
+
+
+
+
+
+
+<script type="text/javascript" async="" src="./Intra_files/analytics.js"></script><script src="./Intra_files/application-6f932a448e0d76308f16.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style>
+<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Intra</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="IlAy/gGBXLG3f9gNrA6Py6qmjCr4p9IBVKuDYUQTfsD0UIx0QTyedYpSh3lgP0OtmTerGtJ+H8NiZdBcSxeVsg=="><link rel="shortcut icon" type="image/x-icon" href="https://intra.intek.io/assets/favicons/favicon-1b7d6090790f969fb9f6b3f95974939b4342c9f5386e8786e028137546af77f3.ico"><link rel="icon" type="image/png" href="https://intra.intek.io/assets/favicons/favicon-32x32-1678016cb3e3e35b8edba22997eea5af8bb010786ee5e59ee599cd0b52721c93.png" sizes="32x32"><link rel="apple-touch-icon" type="image/x-icon" href="https://intra.intek.io/assets/favicons/apple-touch-icon-c2d8257a254e2b63ef441e4648f657e03d0679da1a2a596885004f1d385e27a1.png" sizes="180x180"><link rel="mask-icon" type="image/x-icon" href="https://intra.intek.io/assets/favicons/safari-pinned-tab-8866ece0fc0d48dc925ba7fe97120701d2c630e9e99fcc04afbb14399486f462.svg" color="#5bbad5"><link rel="manifest" type="image/x-icon" href="https://intra.intek.io/assets/favicons/site-094a423d4448987c8dca2dbfe59d77f80715528a39503a48e39996bb1911b043.webmanifest"><meta content="#da532c" name="msapplication-TileColor"><meta content="#000000" name="theme-color"><style id="ace-monokai">.ace-monokai .ace_gutter {background: #2F3129;color: #8F908A}.ace-monokai .ace_print-margin {width: 1px;background: #555651}.ace-monokai {background-color: #272822;color: #F8F8F2}.ace-monokai .ace_cursor {color: #F8F8F0}.ace-monokai .ace_marker-layer .ace_selection {background: #49483E}.ace-monokai.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #272822;}.ace-monokai .ace_marker-layer .ace_step {background: rgb(102, 82, 0)}.ace-monokai .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid #49483E}.ace-monokai .ace_marker-layer .ace_active-line {background: #202020}.ace-monokai .ace_gutter-active-line {background-color: #272727}.ace-monokai .ace_marker-layer .ace_selected-word {border: 1px solid #49483E}.ace-monokai .ace_invisible {color: #52524d}.ace-monokai .ace_entity.ace_name.ace_tag,.ace-monokai .ace_keyword,.ace-monokai .ace_meta.ace_tag,.ace-monokai .ace_storage {color: #F92672}.ace-monokai .ace_punctuation,.ace-monokai .ace_punctuation.ace_tag {color: #fff}.ace-monokai .ace_constant.ace_character,.ace-monokai .ace_constant.ace_language,.ace-monokai .ace_constant.ace_numeric,.ace-monokai .ace_constant.ace_other {color: #AE81FF}.ace-monokai .ace_invalid {color: #F8F8F0;background-color: #F92672}.ace-monokai .ace_invalid.ace_deprecated {color: #F8F8F0;background-color: #AE81FF}.ace-monokai .ace_support.ace_constant,.ace-monokai .ace_support.ace_function {color: #66D9EF}.ace-monokai .ace_fold {background-color: #A6E22E;border-color: #F8F8F2}.ace-monokai .ace_storage.ace_type,.ace-monokai .ace_support.ace_class,.ace-monokai .ace_support.ace_type {font-style: italic;color: #66D9EF}.ace-monokai .ace_entity.ace_name.ace_function,.ace-monokai .ace_entity.ace_other,.ace-monokai .ace_entity.ace_other.ace_attribute-name,.ace-monokai .ace_variable {color: #A6E22E}.ace-monokai .ace_variable.ace_parameter {font-style: italic;color: #FD971F}.ace-monokai .ace_string {color: #E6DB74}.ace-monokai .ace_comment {color: #75715E}.ace-monokai .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ0FD0ZXBzd/wPAAjVAoxeSgNeAAAAAElFTkSuQmCC) right repeat-y}
+/*# sourceURL=ace/css/ace-monokai */</style></head>
+<body class="app bgc-grey-100">
+<div class="sidebar">
+<div class="sidebar-inner">
+<div class="sidebar-logo">
+<div class="peers ai-c fxw-nw">
+<div class="peer peer-greed">
+<a class="sidebar-link td-n" href="https://intra.intek.io/">
+<div class="peers ai-c fxw-nw">
+<div class="peer">
+<div class="logo d-flex border-bottom">
+<img width="60" height="60" class="ml-1 mt-1 pb-1" src="./Intra_files/logo-2658c529259c41376eff7d47d2cf2154b134c912148ffe7af7edda04e086708c.svg">
+</div>
+</div>
+<div class="peer peer-greed">
+<h5 class="lh-1 mB-0 logo-text">Intra</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="peer">
+<div class="mobile-toggle sidebar-toggle">
+<a class="td-n" href="https://intra.intek.io/projects/lgit/subject">
+<i class="fas fa-arrow-circle-left"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<ul class="sidebar-menu scrollable pos-r ps ps--active-y">
+<li class="nav-item pT-15 pB-15 active border-bottom">
+<a class="sidebar-link" href="https://intra.intek.io/topics"><span class="icon-holder">
+<i class="fas fa-chalkboard-teacher"></i>
+</span>
+<span class="title">Elearning</span>
+</a></li>
+<li class="nav-item pT-15 pB-15 active border-bottom">
+<a class="sidebar-link" href="https://intra.intek.io/projects"><span class="icon-holder">
+<i class="fas fa-project-diagram"></i>
+</span>
+<span class="title">Projects</span>
+</a></li>
+</ul>
+</div>
+</div>
+<div class="page-container">
+<div class="header navbar">
+<div class="header-container">
+<ul class="nav-left">
+<li class="d-block d-lg-none">
+<a class="sidebar-toggle" id="sidebar-toggle">
+<i class="fas fa-bars"></i>
+</a>
+</li>
+<li class="search-input active peers align-items-end">
+<div class="peer">
+<i class="fas fa-search pdd-right-10 mr-2 pB-10 text-muted" id="search-icon"></i>
+</div>
+<div class="peer search">
+<form action="https://intra.intek.io/searches" class="form-inline">
+<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="form-control mr-sm-2 tt-input" data-typeahead="" data-typeahead-clickable="" data-typeahead-sources="{&quot;users&quot;:&quot;/users&quot;,&quot;projects&quot;:&quot;/projects&quot;}" name="search" placeholder="Search..." autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-users"></div><div class="tt-dataset tt-dataset-projects"></div></div></span>
+</form>
+</div>
+</li>
+</ul>
+<ul class="nav-right">
+<li class="ml-auto">
+<a class="pr-2" href="https://intra.intek.io/notebooks"><i class="fas fa-book"></i>
+</a></li>
+<li class="notifications dropdown" data-alert="/users/pan/alerts/read_all.json">
+<span class="counter" data-alert-counter="">1</span>
+<a class="dropdown-toggle no-after" data-toggle="dropdown" href="https://intra.intek.io/projects/lgit/subject">
+<i class="fas fa-bell"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="pX-20 pY-15 bdB">
+<i class="fas fa-bell pR-10"></i>
+<span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+</li>
+<li>
+<ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm ps">
+<li>
+<a class="peers fxw-nw td-n p-10 bdB c-grey-800 cH-blue bgcH-grey-100" href="https://intra.intek.io/projects/exam-python/scales/44/scales_teams/8822">
+<div class="peer mR-15 mt-1">
+<img alt="" class="w-3r bdrs-50p" src="./Intra_files/squared_sentinel.jpg">
+</div>
+<div class="peer peer-greed">
+<div>
+<div class="mB-5">
+<p class="fw-500 my-0 fs-3">Exam Python - Exam 15-11</p>
+<small class="time font-italic"><time class="timeago" datetime="2018-11-15T20:33:47+07:00">Yesterday at 8:33 PM</time></small>
+</div>
+<span class="c-grey-600 fsz-sm"><table>
+<tbody><tr>
+<td class="text-nowrap h-100">
+Exam
+</td>
+<td class="w-100 pl-4 h-100">
+<div class="progress mb-0 danger">
+<div class="bg-warning progress-bar" style="width: 25.0%"></div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a class="peers fxw-nw td-n p-10 bdB c-grey-800 cH-blue bgcH-grey-100" href="https://intra.intek.io/projects/sorting-deck/scales/36/scales_teams/8787">
+<div class="peer mR-15 mt-1">
+<img alt="" class="w-3r bdrs-50p" src="./Intra_files/squared_dtoan.jpg">
+</div>
+<div class="peer peer-greed">
+<div>
+<div class="mB-5">
+<p class="fw-500 my-0 fs-3">Sorting Deck - Staff review</p>
+<small class="time font-italic"><time class="timeago" datetime="2018-11-13T15:16:54+07:00">Last Tuesday at 3:16 PM</time></small>
+</div>
+<span class="c-grey-600 fsz-sm"><table>
+<tbody><tr>
+<td class="text-nowrap h-100">
+Staff review
+</td>
+<td class="w-100 pl-4 h-100">
+<div class="progress mb-0 danger">
+<div class="bg-success progress-bar" style="width: 55.55555555555556%"></div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a class="peers fxw-nw td-n p-10 bdB c-grey-800 cH-blue bgcH-grey-100" href="https://intra.intek.io/projects/the-bench/scales/41/scales_teams/8726">
+<div class="peer mR-15 mt-1">
+<img alt="" class="w-3r bdrs-50p" src="./Intra_files/squared_dtoan.jpg">
+</div>
+<div class="peer peer-greed">
+<div>
+<div class="mB-5">
+<p class="fw-500 my-0 fs-3">The bench - Staff review</p>
+<small class="time font-italic"><time class="timeago" datetime="2018-11-13T15:10:42+07:00">Last Tuesday at 3:10 PM</time></small>
+</div>
+<span class="c-grey-600 fsz-sm"><table>
+<tbody><tr>
+<td class="text-nowrap h-100">
+Staff review
+</td>
+<td class="w-100 pl-4 h-100">
+<div class="progress mb-0 danger">
+<div class="bg-success progress-bar" style="width: 64.70588235294117%"></div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a class="peers fxw-nw td-n p-10 bdB c-grey-800 cH-blue bgcH-grey-100" href="https://intra.intek.io/projects/sorting-deck/scales/36/scales_teams/8787">
+<div class="peer mR-15 mt-1">
+<img alt="" class="w-3r bdrs-50p" src="./Intra_files/squared_dtoan.jpg">
+</div>
+<div class="peer peer-greed">
+<div>
+<div class="mB-5">
+<p class="fw-500 my-0 fs-3">Sorting Deck - Staff review</p>
+<small class="time font-italic"><time class="timeago" datetime="2018-11-13T12:14:07+07:00">Last Tuesday at 12:14 PM</time></small>
+</div>
+<span class="c-grey-600 fsz-sm"><table>
+<tbody><tr>
+<td class="text-nowrap h-100">
+Staff review
+</td>
+<td class="w-100 pl-4 h-100">
+<div class="progress mb-0 danger">
+<div class="bg-success progress-bar" style="width: 55.55555555555556%"></div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a class="peers fxw-nw td-n p-10 bdB c-grey-800 cH-blue bgcH-grey-100" href="https://intra.intek.io/projects/the-bench/scales/41/scales_teams/8726">
+<div class="peer mR-15 mt-1">
+<img alt="" class="w-3r bdrs-50p" src="./Intra_files/squared_dtoan.jpg">
+</div>
+<div class="peer peer-greed">
+<div>
+<div class="mB-5">
+<p class="fw-500 my-0 fs-3">The bench - Staff review</p>
+<small class="time font-italic"><time class="timeago" datetime="2018-11-12T21:13:38+07:00">Last Monday at 9:13 PM</time></small>
+</div>
+<span class="c-grey-600 fsz-sm"><table>
+<tbody><tr>
+<td class="text-nowrap h-100">
+Staff review
+</td>
+<td class="w-100 pl-4 h-100">
+<div class="progress mb-0 danger">
+<div class="bg-success progress-bar" style="width: 64.70588235294117%"></div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</span>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</li>
+<li class="pX-20 pY-15 ta-c bdT">
+<span>
+<a class="c-grey-600 cH-blue fsz-sm td-n" href="https://intra.intek.io/users/pan/alerts">
+View All Notifications
+<i class="fs-xs fas fa-angle-right mL-10"></i>
+</a>
+</span>
+</li>
+</ul>
+</li>
+<script>
+  $('.alert-modal').modal({keyboard: false, backdrop: 'static'})
+</script>
+
+<li class="dropdown mr-2 mr-md-5">
+<a class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown" href="https://intra.intek.io/projects/lgit/subject">
+<div class="peer mR-10">
+<img class="w-2r bdrs-50p" src="./Intra_files/thumb_pan.jpg">
+</div>
+<div class="peer">
+<span class="fsz-sm c-grey-900">pan</span>
+</div>
+</a>
+<ul class="dropdown-menu fsz-sm">
+<li>
+<a class="d-b td-n pY-5 bgcH-grey-100 c-grey-700" href="https://intra.intek.io/users/me"><i class="fas fa-user mR-10"></i>
+<span>Profile</span>
+</a></li>
+<li>
+<a class="d-b td-n pY-5 bgcH-grey-100 c-grey-700" href="https://intra.intek.io/users"><i class="fas fa-users mR-5"></i>
+<span>Trombi</span>
+</a></li>
+<li class="divider" role="separator"></li>
+<li>
+<a class="d-b td-n pY-5 bgcH-grey-100 c-grey-700" rel="nofollow" data-method="delete" href="https://intra.intek.io/users/sign_out"><i class="fas fa-power-off mR-10"></i>
+<span>Logout</span>
+</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<main class="main-content no-margin">
+<div class="row">
+<div class="col-lg-12">
+
+<div class="row" id="subject">
+<div class="col-sm-2 bgc-white border-right pr-0" id="left_side">
+<div class="position-sticky w-100 t-70">
+<h5 class="pl-2 pt-2 mb-3">
+lgit
+</h5>
+<ul class="list-unstyled list-group d-block">
+<li class="p-5 d-flex mT-15 mB-15" data-id="178">
+<i class="fas fa-long-arrow-alt-right ml-4 mr-1 mt-1"></i>
+<a class="text-truncate" data-toggle="list" data-scroll="true" href="https://intra.intek.io/projects/lgit/subject#team-agreement-58dba185-e4a8-4226-81dc-6377217451d8">Team agreement
+</a></li>
+<li class="p-5 d-flex mT-15 mB-15" data-id="176">
+<i class="fas fa-long-arrow-alt-right ml-4 mr-1 mt-1"></i>
+<a class="text-truncate  active show" data-toggle="list" data-scroll="true" href="https://intra.intek.io/projects/lgit/subject#core-project-84d02d0d-e450-447a-aed3-de5b9ca74fb9">Core project
+</a></li>
+<li class="p-5 d-flex mT-15 mB-15" data-id="177">
+<i class="fas fa-star ml-4 mr-1 mt-1"></i>
+<a class="text-truncate " data-toggle="list" data-scroll="true" href="https://intra.intek.io/projects/lgit/subject#bonus-branches">BONUS: branches
+</a></li>
+</ul>
+</div>
+</div>
+<div class="col-sm-10" id="right_side">
+<h1 class="text-dark text-center mt-2">
+lgit
+</h1>
+<div class="tab-content">
+<div class="tab-pane" id="team-agreement-58dba185-e4a8-4226-81dc-6377217451d8">
+<h4 class="text-center">
+Team agreement
+</h4>
+<h6 class="text-center mb-5">
+Notions: teamwork
+</h6>
+<table class="table-borderless table">
+<tbody><tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Role of the team agreement</h3>
+<div class="mx-3 text-justify readable_text">
+<p>You just did it for the weekend rush, so you know what this is about, but this time the project is 2-week-long so the team agreement is even more important.</p><p>Take the time to read through the subject and discuss your expectations with your partner. When all is said and you are ready to start working, write down your planned process and push it to your repository.</p><p>The mid-way peer review will be a perfect opportunity to dig out your team agreement and adjust your team dynamics if things didn't go as planned. So, do the team agreement now, not later, and do it seriously.</p>
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">What goes in it</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Your&nbsp;<code>team_agreement.md</code> file should address at least the following points:</p><ul>
+<li>the name of the team</li>
+<li>the working hours/days each member commits to</li>
+<li>how often you will check-in with each others' progress</li>
+<li>the strengths and weaknesses of each member, and how to leverage/mitigate them for the project</li>
+<li>the allocation of the workload</li>
+<li>your strategy so that you all understand the codebase</li>
+</ul><p>... and anything else that you deem useful for a fruitful collaboration.</p>
+
+</div>
+
+</td>
+</tr>
+</tbody></table>
+<div class="d-flex px-5 pb-5">
+<div class="mr-auto"></div>
+<a class="text-dark fs-4" data-scroll="true" data-slug="core-project-84d02d0d-e450-447a-aed3-de5b9ca74fb9" href="https://intra.intek.io/projects/lgit/subject#">Core project
+<i class="fas fa-arrow-right"></i>
+</a></div>
+</div>
+<div class="tab-pane  active show" id="core-project-84d02d0d-e450-447a-aed3-de5b9ca74fb9">
+<h4 class="text-center">
+Core project
+</h4>
+<h6 class="text-center mb-5">
+Notions: git basics
+</h6>
+<table class="table-borderless table">
+<tbody><tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Introduction</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Version control is a powerful tool for collaborative teams. It might seem overly complicated for the purpose of just saving some code, and you might have already been traumatised by some wild git conflict on your own projects... every aspiring developer gets scared by git at some point! But imagine working in a team of a dozen developers on a project that has several features being developed in parallel: you need a smart process to ensure the tracking &amp; integrity of the main project and a way to incorporate smoothly the new features.</p><p>Therefore, over the next two weeks, you will understand what version control is by looking under the hood and coding your own version of git. Understand how git works, and you will never waver in front of a conflict again!</p>
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Your mission</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Your task is to code a lightweight version of git. The goal is to understand how git works so that you can make sense of the magic that happens when you "git add / git commit / git push" - and save yourself of any git trouble you might encounter in the future as you work on large teams.</p><p>As the actual implementation of git is a bit complex, we'll work on a simplified version together, step by step. While simplified a little, this version still gives an accurate representation of how git works.</p><p>Your program will be called <code>lgit.py</code> and will implement versioning locally, but you don't have to handle remotes (so no pull, fetch or push).</p>
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">First: what is Git?</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Git is a type of database: it records the state of the files in your working directory, which allows you to have a clear picture of what your directory contains at a given moment.</p><p>Git stores all its data in a hidden directory named <code>.git</code>. That directory is created when you type the command <code>git init</code> in a new directory, as tracking is initialised in that directory.</p><p>From there, any time you use a git command (<code>git add</code>, <code>git commit</code>, <code>git status</code>...), git will read and update the information stored in the .git directory. Destroy the .git directory, and you lose absolutely all tracking information! 🔥</p>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="$ ls -al
+total 0
+drwxr-xr-x   2 laurie  wheel   64 Nov 10 17:46 .
+drwxrwxrwt  25 root    wheel  800 Nov 10 17:46 ..
+
+$ git init
+Initialized empty Git repository in /private/tmp/test/.git/
+
+$ ls -al
+total 0
+drwxr-xr-x   3 laurie  wheel   96 Nov 10 17:46 .
+drwxrwxrwt  25 root    wheel  800 Nov 10 17:46 ..
+drwxr-xr-x   9 laurie  wheel  288 Nov 10 17:46 .git
+
+# the git init command has initialised all important files &amp; directories in the .git directory
+$ ls -l .git
+total 24
+-rw-r--r--   1 laurie  wheel   23 Nov 10 17:46 HEAD
+-rw-r--r--   1 laurie  wheel  137 Nov 10 17:46 config
+-rw-r--r--   1 laurie  wheel   73 Nov 10 17:46 description
+drwxr-xr-x  13 laurie  wheel  416 Nov 10 17:46 hooks
+drwxr-xr-x   3 laurie  wheel   96 Nov 10 17:46 info
+drwxr-xr-x   4 laurie  wheel  128 Nov 10 17:46 objects
+drwxr-xr-x   4 laurie  wheel  128 Nov 10 17:46 refs
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8</div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">al</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">total</span> <span class="ace_constant ace_numeric">0</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">xr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">x</span>   <span class="ace_constant ace_numeric">2</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">wheel</span>   <span class="ace_constant ace_numeric">64</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">17</span>:<span class="ace_constant ace_numeric">46</span> .</div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxrwxrwt</span>  <span class="ace_constant ace_numeric">25</span> <span class="ace_identifier">root</span>    <span class="ace_identifier">wheel</span>  <span class="ace_constant ace_numeric">800</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">17</span>:<span class="ace_constant ace_numeric">46</span> ..</div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">git</span> <span class="ace_identifier">init</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">Initialized</span> <span class="ace_identifier">empty</span> <span class="ace_identifier">Git</span> <span class="ace_identifier">repository</span> <span class="ace_keyword">in</span> <span class="ace_keyword ace_operator">/</span><span class="ace_identifier">private</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">tmp</span><span class="ace_keyword ace_operator">/</span><span class="ace_support ace_function ace_builtin">test</span><span class="ace_keyword ace_operator">/</span>.<span class="ace_identifier">git</span><span class="ace_keyword ace_operator">/</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">al</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">total</span> <span class="ace_constant ace_numeric">0</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">xr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">x</span>   <span class="ace_constant ace_numeric">3</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">wheel</span>   <span class="ace_constant ace_numeric">96</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">17</span>:<span class="ace_constant ace_numeric">46</span> .</div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxrwxrwt</span>  <span class="ace_constant ace_numeric">25</span> <span class="ace_identifier">root</span>    <span class="ace_identifier">wheel</span>  <span class="ace_constant ace_numeric">800</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">17</span>:<span class="ace_constant ace_numeric">46</span> ..</div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">xr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">x</span>   <span class="ace_constant ace_numeric">9</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">wheel</span>  <span class="ace_constant ace_numeric">288</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">17</span>:<span class="ace_constant ace_numeric">46</span> .<span class="ace_identifier">git</span></div><div class="ace_line" style="height:12px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 312px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">The key concepts</h3>
+<div class="mx-3 text-justify readable_text">
+<p>The main thing to understand is that, contrary to other version control systems, git records a full picture (a "snapshot") of your working directory every time you do a <code>git commit</code>. Every commit is a file listing that represents the exact state of your tracked files at one point.</p><p>What happens when you update a file? Git doesn't bother recording the difference between the new version and the old version, it actually just stores the new version of the file. This makes retrieving a version of a file extremely easy, as you just have to fetch it from the git database. Let's repeat it: git stores full files, and not just "updates" to a file. (<em>This is actually not an absolute rule, but it's enough for our project today.</em>)</p><p>Now the last thing to understand is what is the index. The index is a "temporary snapshot" that contains what will effectively be stored if you do a <code>git commit</code>. The index is a listing of all the files you have <code>git add</code>'ed previously, and when you type in <code>git commit</code> what you effectively do is make a permanent copy of that snapshot. That index is also called the staging area, because it's the area where you make changes, add files, remove files (you "stage" your files... like a theater director!); and when you are perfectly content with what it looks like, you commit that snapshot permanently in your git history. Basically, a <code>git commit</code> says "I want to remember my directory in exactly that state, please archive a picture of my staging area, kthkbay."</p>
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Your .lgit directory structure</h3>
+<div class="mx-3 text-justify readable_text">
+<p>For the purpose of simplification, we will use the following directory structure:</p><ul>
+<li>a directory <code>objects</code> will store the files you <code>lgit add</code>
+</li>
+<li>a directory <code>commits</code> will store the commit objects: those are not the actual file listings but some information about the commit (author, date &amp; commit message)</li>
+<li>a directory <code>snapshots</code> will store the actual file listings</li>
+<li>a file <code>index</code> will host the staging area &amp; other information</li>
+<li>a file <code>config</code> will store the name of the author, initialised from the environment variable LOGNAME</li>
+</ul><p>The command <code>lgit init</code> will create the directory structure.</p><p>If a lgit command is typed in a directory which doesn't have (nor its parent directories) a <code>.lgit</code> directory, lgit will exit with a fatal error.</p>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="# let&#39;s start with an empty directory
+$ ls -la
+total 0
+drwxr-xr-x   3 laurie  staff   96 Nov 10 18:16 .
+drwxr-xr-x  11 laurie  staff  352 Nov 10 18:16 ..
+
+# oops, we haven&#39;t initialised the lgit directory yet!
+$ ../lgit.py status
+fatal: not a git repository (or any of the parent directories)
+
+$ ../lgit.py init
+
+$ ls -la
+total 0
+drwxr-xr-x   3 laurie  staff   96 Nov 10 18:16 .
+drwxr-xr-x  11 laurie  staff  352 Nov 10 18:16 ..
+drwxr-xr-x   9 laurie  staff  288 Nov 10 18:16 .lgit
+
+$ ls -lR .lgit
+total 8
+drwxr-xr-x  2 laurie  staff  64 Nov 10 18:39 commits
+-rw-r--r--  1 laurie  staff   7 Nov 10 18:39 config
+-rw-r--r--  1 laurie  staff   0 Nov 10 18:39 index
+drwxr-xr-x  2 laurie  staff  64 Nov 10 18:39 objects
+drwxr-xr-x  2 laurie  staff  64 Nov 10 18:39 snapshots
+
+.lgit/commits:
+
+.lgit/objects:
+
+.lgit/snapshots:
+
+# the content of the config file has been initialised to the LOGNAME environment variable
+$ env | grep LOGNAME
+LOGNAME=laurie
+$ cat .lgit/config
+laurie
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8</div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px"><span class="ace_comment"># let's start with an empty directory</span></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">la</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">total</span> <span class="ace_constant ace_numeric">0</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">xr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">x</span>   <span class="ace_constant ace_numeric">3</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">staff</span>   <span class="ace_constant ace_numeric">96</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">18</span>:<span class="ace_constant ace_numeric">16</span> .</div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">xr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">x</span>  <span class="ace_constant ace_numeric">11</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">staff</span>  <span class="ace_constant ace_numeric">352</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">18</span>:<span class="ace_constant ace_numeric">16</span> ..</div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># oops, we haven't initialised the lgit directory yet!</span></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">status</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">fatal</span>: <span class="ace_identifier">not</span> <span class="ace_identifier">a</span> <span class="ace_identifier">git</span> <span class="ace_identifier">repository</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">or</span> <span class="ace_identifier">any</span> <span class="ace_identifier">of</span> <span class="ace_identifier">the</span> <span class="ace_identifier">parent</span> <span class="ace_identifier">directories</span><span class="ace_paren ace_rparen">)</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">init</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">la</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">total</span> <span class="ace_constant ace_numeric">0</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 468px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Structure of the "objects" directory</h3>
+<div class="mx-3 text-justify readable_text">
+<p>When you <code>lgit add</code> a file, what you do is store a copy of the file content in the lgit database.</p><p>File contents will be stored in the lgit database with their SHA1 hash value. It means that you have to calculate the SHA1 value of the file content, and you will use the SHA1 value to retrieve the file content at any time.</p><p>Each file will be stocked in the following way:</p><ul>
+<li>the first two characters of the SHA1 will be the directory name</li>
+<li>the last 38 characters will be the file name</li>
+</ul><p>Let's look at an example!</p>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="# let&#39;s create some test file and add it
+$ echo &quot;test content&quot; &gt; test
+$ ../lgit.py add test
+
+# we can check that the object has been created in the lgit database
+$ ls -lR .lgit/objects/
+total 0
+drwxr-xr-x  3 laurie  staff  96 Nov 10 18:46 4f
+
+.lgit/objects//4f:
+total 8
+-rw-r--r--  1 laurie  staff  13 Nov 10 18:46 e2b8dd12cd9cd6a413ea960cd8c09c25f19527
+
+# and yup, the object has our original file content
+$ cat .lgit/objects/4f/e2b8dd12cd9cd6a413ea960cd8c09c25f19527
+test content
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8</div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px"><span class="ace_comment"># let's create some test file and add it</span></div><div class="ace_line" style="height:12px">$ <span class="ace_support ace_function ace_builtin">echo</span> <span class="ace_string ace_start">"</span><span class="ace_string">test content</span><span class="ace_string ace_end">"</span> <span class="ace_keyword ace_operator">&gt;</span> <span class="ace_support ace_function ace_builtin">test</span></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">add</span> <span class="ace_support ace_function ace_builtin">test</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># we can check that the object has been created in the lgit database</span></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">lR</span> .<span class="ace_identifier">lgit</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">objects</span><span class="ace_keyword ace_operator">/</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">total</span> <span class="ace_constant ace_numeric">0</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">drwxr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">xr</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">x</span>  <span class="ace_constant ace_numeric">3</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">staff</span>  <span class="ace_constant ace_numeric">96</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">18</span>:<span class="ace_constant ace_numeric">46</span> <span class="ace_constant ace_numeric">4</span><span class="ace_identifier">f</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">.<span class="ace_identifier">lgit</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">objects</span><span class="ace_keyword ace_operator">//</span><span class="ace_constant ace_numeric">4</span><span class="ace_identifier">f</span>:</div><div class="ace_line" style="height:12px"><span class="ace_identifier">total</span> <span class="ace_constant ace_numeric">8</span></div><div class="ace_line" style="height:12px"><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">rw</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">r</span><span class="ace_keyword ace_operator">--</span><span class="ace_identifier">r</span><span class="ace_keyword ace_operator">--</span>  <span class="ace_constant ace_numeric">1</span> <span class="ace_identifier">laurie</span>  <span class="ace_identifier">staff</span>  <span class="ace_constant ace_numeric">13</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">10</span> <span class="ace_constant ace_numeric">18</span>:<span class="ace_constant ace_numeric">46</span> <span class="ace_identifier">e2b8dd12cd9cd6a413ea960cd8c09c25f19527</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># and yup, the object has our original file content</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 216px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Structure of the "index" file</h3>
+<div class="mx-3 text-justify readable_text">
+<p>If you remember, the "index" file is our staging area: it's where we keep all current file information before we commit anything to the permanent "commits"/"snapshots" directories.</p><p>Each line in the index file will correspond to a tracked file and will contain 5 fields.</p><ul>
+<li>1: the timestamp of the file in the working directory</li>
+<li>2: the SHA1 of the content in the working directory</li>
+<li>3: the SHA1 of the file content after you <code>lgit add</code>'ed it</li>
+<li>4: the SHA1 of the file content after you <code>lgit commit</code>'ed it</li>
+<li>5: the file pathname</li>
+</ul><p>So basically the index has information about the content of a given file (as identified by its name) at different stages.</p><p>Let's go back to our example. I just added a file called <code>test</code>, let's look at the index. Since I just added the file, the content is the same in the staging as in the working directory. We have never done a commit so there's no hash in the fourth field.</p>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="$ cat .lgit/index
+20181110184140 4fe2b8dd12cd9cd6a413ea960cd8c09c25f19527 4fe2b8dd12cd9cd6a413ea960cd8c09c25f19527                                          test
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 44px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 40px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1199px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px">$ <span class="ace_identifier">cat</span> .<span class="ace_identifier">lgit</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">index</span></div><div class="ace_line" style="height:12px"><span class="ace_constant ace_numeric">20181110184140</span> <span class="ace_constant ace_numeric">4</span><span class="ace_identifier">fe2b8dd12cd9cd6a413ea960cd8c09c25f19527</span> <span class="ace_constant ace_numeric">4</span><span class="ace_identifier">fe2b8dd12cd9cd6a413ea960cd8c09c25f19527</span>                                          <span class="ace_support ace_function ace_builtin">test</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 48px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1239px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">lgit status</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Let's modify again the <code>test</code> file. We then run <code>lgit status</code> to update the index and... surprise, the file appears both as "to be committed" and "not staged for commit"! How is it possible?</p><p>Well, look at the index file. We had already once <code>lgit add</code>'ed the file, so lgit already has a version ready to be committed. You can check, the SHA1 in the middle didn't change.</p><p>But we also modified that file in the current directory, so the index has been updated with the new file timestamp and the SHA1 representing the new file content in the working directory.</p><p>And you can check that the first SHA1 *isn't* present in the objects directory. That's because it's just the state of the file in the current directory, but we have never <code>lgit add</code>'ed it!</p>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="$ ../lgit.py status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;./lgit.py reset HEAD ...&quot; to unstage)
+
+     modified: test
+
+Changes not staged for commit:
+  (use &quot;./lgit.py add ...&quot; to update what will be committed)
+  (use &quot;./lgit.py checkout -- ...&quot; to discard changes in working directory)
+
+     modified: test
+
+# the hashes for the working directory and the staging area are different!
+$ cat .lgit/index
+20181110190018 48b67a26dc1b5897622a1e332bba3160c7b1f5bb 4fe2b8dd12cd9cd6a413ea960cd8c09c25f19527                                          test
+
+# and we can check that the first hash doesn&#39;t correspond to a file in the database
+$ ls -R .lgit/objects/
+4f
+
+.lgit/objects//4f:
+e2b8dd12cd9cd6a413ea960cd8c09c25f19527
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8</div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">status</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">On</span> <span class="ace_identifier">branch</span> <span class="ace_identifier">master</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_identifier">No</span> <span class="ace_identifier">commits</span> <span class="ace_identifier">yet</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_identifier">Changes</span> <span class="ace_identifier">to</span> <span class="ace_identifier">be</span> <span class="ace_identifier">committed</span>:</div><div class="ace_line" style="height:12px">  <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">use</span> <span class="ace_string ace_start">"</span><span class="ace_string">./lgit.py reset HEAD ...</span><span class="ace_string ace_end">"</span> <span class="ace_identifier">to</span> <span class="ace_identifier">unstage</span><span class="ace_paren ace_rparen">)</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_indent-guide">    </span> <span class="ace_identifier">modified</span>: <span class="ace_support ace_function ace_builtin">test</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_identifier">Changes</span> <span class="ace_identifier">not</span> <span class="ace_identifier">staged</span> <span class="ace_keyword">for</span> <span class="ace_identifier">commit</span>:</div><div class="ace_line" style="height:12px">  <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">use</span> <span class="ace_string ace_start">"</span><span class="ace_string">./lgit.py add ...</span><span class="ace_string ace_end">"</span> <span class="ace_identifier">to</span> <span class="ace_identifier">update</span> <span class="ace_identifier">what</span> <span class="ace_identifier">will</span> <span class="ace_identifier">be</span> <span class="ace_identifier">committed</span><span class="ace_paren ace_rparen">)</span></div><div class="ace_line" style="height:12px">  <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">use</span> <span class="ace_string ace_start">"</span><span class="ace_string">./lgit.py checkout -- ...</span><span class="ace_string ace_end">"</span> <span class="ace_identifier">to</span> <span class="ace_identifier">discard</span> <span class="ace_identifier">changes</span> <span class="ace_keyword">in</span> <span class="ace_identifier">working</span> <span class="ace_identifier">directory</span><span class="ace_paren ace_rparen">)</span></div><div class="ace_line" style="height:12px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 336px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">lgit status: untracked files</h3>
+<div class="mx-3 text-justify readable_text">
+<p><code>lgit status</code> not only updates the index but also reports on the files that are "untracked" by lgit. Those are the files that are present in the working directory, but have never been <code>lgit add</code>'ed.</p>
+<div class="editor-container">
+  <div class="language-python editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="python" data-code="# let&#39;s init a fresh lgit repository
+$ ../lgit.py init
+
+# our directory has a couple of files that have never been added
+$ ls -R
+dir1	file1
+
+./dir1:
+nested_file
+
+# we can check that lgit is currently not tracking those files
+$ ../lgit.py ls-files
+
+$ ../lgit.py status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use &quot;./lgit.py add &lt;file&gt;...&quot; to include in what will be committed)
+
+	 file1
+	 dir1/nested_file
+
+nothing added to commit but untracked files present (use &quot;./lgit.py add&quot; to track)
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8<span class="ace_fold-widget ace_start ace_open" style="height: 12px;"></span></div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px"><span class="ace_comment"># let's init a fresh lgit repository</span></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">init</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># our directory has a couple of files that have never been added</span></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">R</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">dir1</span>    <span class="ace_identifier">file1</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">.<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">dir1</span>:</div><div class="ace_line" style="height:12px"><span class="ace_identifier">nested_file</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># we can check that lgit is currently not tracking those files</span></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">ls</span><span class="ace_keyword ace_operator">-</span><span class="ace_identifier">files</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">status</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 324px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">lgit commit, the commit object &amp; the snapshot</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Okay, let's actually commit the changes (that is, tell lgit to store the snapshot permanently).</p><p>The commit object and the snapshot are simplified here compared to what git actually does, but the principle is the same.</p><p>Both objects have the same name (here it's the timestamp with milliseconds, you can use another way to name your files if you want) and are in their respective folders.</p><p>Your commit object will contain the following information:</p><ul>
+<li>author name</li>
+<li>time of the commit</li>
+<li>an empty line</li>
+<li>the commit message</li>
+</ul><p>The snapshot is a simplified version of the index with just the SHA1 of the staged content and the filename.</p><p>Let's walk through an example!</p>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="$ ../lgit.py commit -m &quot;my first commit&quot;
+
+# after the commit command, we check that the proper commit object and snapshot have been created
+$ ls .lgit/commits
+20181110190825.781983
+
+$ ls .lgit/snapshots/
+20181110190825.781983
+
+$ cat .lgit/commits/20181110190825.781983
+laurie
+20181110190825
+
+my first commit
+
+$ cat .lgit/snapshots/20181110190825.781983
+4fe2b8dd12cd9cd6a413ea960cd8c09c25f19527 test
+
+# and now if we check the index, the last one now has the same value of the staging... and the first one still hasn&#39;t changed, because we still haven&#39;t `git add` the new changes
+$ cat .lgit/index
+20181110190018 48b67a26dc1b5897622a1e332bba3160c7b1f5bb 4fe2b8dd12cd9cd6a413ea960cd8c09c25f19527 4fe2b8dd12cd9cd6a413ea960cd8c09c25f19527 test
+
+$ ../lgit.py status
+On branch master
+Changes not staged for commit:
+  (use &quot;./lgit.py add ...&quot; to update what will be committed)
+  (use &quot;./lgit.py checkout -- ...&quot; to discard changes in working directory)
+
+     modified: test
+
+no changes added to commit (use &quot;./lgit.py add and/or &quot;./lgit.py commit -a&quot;)
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8</div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">commit</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">m</span> <span class="ace_string ace_start">"</span><span class="ace_string">my first commit</span><span class="ace_string ace_end">"</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># after the commit command, we check that the proper commit object and snapshot have been created</span></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> .<span class="ace_identifier">lgit</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">commits</span></div><div class="ace_line" style="height:12px"><span class="ace_constant ace_numeric">20181110190825.781983</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">ls</span> .<span class="ace_identifier">lgit</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">snapshots</span><span class="ace_keyword ace_operator">/</span></div><div class="ace_line" style="height:12px"><span class="ace_constant ace_numeric">20181110190825.781983</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ <span class="ace_identifier">cat</span> .<span class="ace_identifier">lgit</span><span class="ace_keyword ace_operator">/</span><span class="ace_identifier">commits</span><span class="ace_keyword ace_operator">/</span><span class="ace_constant ace_numeric">20181110190825.781983</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">laurie</span></div><div class="ace_line" style="height:12px"><span class="ace_constant ace_numeric">20181110190825</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_identifier">my</span> <span class="ace_identifier">first</span> <span class="ace_identifier">commit</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 396px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">lgit log</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Now that you have worked hard, you might want to see all those commits you did! The <code>lgit log</code> command should display all commits, sorted in descending order, with the following information:</p><ul>
+<li>your commit identifier (for lgit we will use the commit filename, the real git uses the SHA1 of the commit)</li>
+<li>a field with the author of the commit</li>
+<li>a field with a human-readable date</li>
+<li>and the commit message</li>
+</ul>
+<div class="editor-container">
+  <div class="language-sh editor ace_editor ace-monokai ace_dark" data-readonly="true" data-editor="sh" data-code="# after adding your first files, you do your first commit
+$ ../lgit.py commit -m &quot;1st commit&quot;
+
+# ... you add some more files...
+$ ../lgit.py commit -m &quot;2nd commit&quot;
+
+$ ../lgit.py log
+commit 20181113171124.703280
+Author: laurie
+Date: Tue Nov 13 17:11:24 2018
+
+	 2nd commit
+
+
+commit 20181113171110.826441
+Author: laurie
+Date: Tue Nov 13 17:11:10 2018
+
+	 1st commit
+
+" style="height: 150px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 12px; width: 6.20031px; left: 50px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 174px; width: 46px;"><div class="ace_gutter-cell " style="height: 12px;">1</div><div class="ace_gutter-cell " style="height: 12px;">2</div><div class="ace_gutter-cell " style="height: 12px;">3</div><div class="ace_gutter-cell " style="height: 12px;">4</div><div class="ace_gutter-cell " style="height: 12px;">5</div><div class="ace_gutter-cell " style="height: 12px;">6</div><div class="ace_gutter-cell " style="height: 12px;">7</div><div class="ace_gutter-cell " style="height: 12px;">8</div><div class="ace_gutter-cell " style="height: 12px;">9</div><div class="ace_gutter-cell " style="height: 12px;">10</div><div class="ace_gutter-cell " style="height: 12px;">11</div><div class="ace_gutter-cell " style="height: 12px;">12</div><div class="ace_gutter-cell " style="height: 12px;">13</div><div class="ace_gutter-cell " style="height: 12px;">14</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 12px;"></div></div><div class="ace_scroller" style="left: 46px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1178px; height: 174px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 500.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:12px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:12px"><span class="ace_comment"># after adding your first files, you do your first commit</span></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">commit</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">m</span> <span class="ace_string ace_start">"</span><span class="ace_string">1st commit</span><span class="ace_string ace_end">"</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"><span class="ace_comment"># ... you add some more files...</span></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">commit</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">m</span> <span class="ace_string ace_start">"</span><span class="ace_string">2nd commit</span><span class="ace_string ace_end">"</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">$ ..<span class="ace_keyword ace_operator">/</span><span class="ace_identifier">lgit</span>.<span class="ace_identifier">py</span> <span class="ace_identifier">log</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">commit</span> <span class="ace_constant ace_numeric">20181113171124.703280</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">Author</span>: <span class="ace_identifier">laurie</span></div><div class="ace_line" style="height:12px"><span class="ace_identifier">Date</span>: <span class="ace_identifier">Tue</span> <span class="ace_identifier">Nov</span> <span class="ace_constant ace_numeric">13</span> <span class="ace_constant ace_numeric">17</span>:<span class="ace_constant ace_numeric">11</span>:<span class="ace_constant ace_numeric">24</span> <span class="ace_constant ace_numeric">2018</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px">     <span class="ace_constant ace_numeric">2</span><span class="ace_identifier">nd</span> <span class="ace_identifier">commit</span></div><div class="ace_line" style="height:12px"></div><div class="ace_line" style="height:12px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.20031px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 252px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 46px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1224px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Directions</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Now hopefully after that slow walk-through, you have a good idea of how your lgit program works and interacts with the .lgit directory.</p><p>It's time for you to code your own!</p><p>Here are the commands that must be present in your project:</p><ul>
+<li>
+<strong>lgit init</strong>: initialises version control in the current directory (until this has been done, any lgit command should return a fatal error)</li>
+<li>
+<strong>lgit add</strong>: stages changes, should work with files and recursively with directories</li>
+<li>
+<strong>lgit rm</strong>: removes a file from the working directory and the index</li>
+<li>
+<strong>lgit config --author</strong>: sets a user for authoring the commits</li>
+<li>
+<strong>lgit commit -m</strong>: creates a commit with the changes currently staged (if the config file is empty, this should not be possible!)</li>
+<li>
+<strong>lgit status</strong>: updates the index with the content of the working directory and displays the status of tracked/untracked files</li>
+<li>
+<strong>lgit ls-files</strong>: lists all the files currently tracked in the index, relative to the current directory</li>
+<li>
+<strong>lgit log</strong>: shows the commit history</li>
+</ul><p>You must respect the directory structure &amp; files indicated in the subject.</p>
+
+</div>
+
+</td>
+</tr>
+</tbody></table>
+<div class="d-flex px-5 pb-5">
+<a class="text-dark fs-4" data-scroll="true" data-slug="team-agreement-58dba185-e4a8-4226-81dc-6377217451d8" href="https://intra.intek.io/projects/lgit/subject#"><i class="fas fa-arrow-left"></i>
+Team agreement
+</a><div class="mr-auto"></div>
+<a class="text-dark fs-4" data-scroll="true" data-slug="bonus-branches" href="https://intra.intek.io/projects/lgit/subject#">BONUS: branches
+<i class="fas fa-arrow-right"></i>
+</a></div>
+</div>
+<div class="tab-pane " id="bonus-branches">
+<h4 class="text-center">
+BONUS: branches
+</h4>
+<h6 class="text-center mb-5">
+Notions: branching and merging
+</h6>
+<table class="table-borderless table">
+<tbody><tr>
+<td>
+<h3 class="mx-3 mb-4 border-bottom">Branches &amp; merging</h3>
+<div class="mx-3 text-justify readable_text">
+<p>Branches are one of git's most powerful features. It allows developers to develop concurrent code, from one single point of code in time. This allows teams to work on different features separately.</p><p>Later on, when they are stable, those "branches" are merged into the main program.</p><p>For this bonus, you will implement the following commands:</p><ul>
+<li>
+<strong>lgit branch</strong>: creates a new branch</li>
+<li>
+<strong>lgit checkout</strong>: replaces the working directory with the content of the head commit of the specified branch</li>
+<li>
+<strong>lgit merge</strong>: merges one branch onto another</li>
+<li>
+<strong>lgit stash</strong>: puts away in a "dirty working directory" the current changes, which allows to switch to a new branch without working files</li>
+</ul><p>To implement branches, you might have to modify a bit the structure of the .lgit directory. For example, it might be relevant to have a&nbsp;<code>HEAD</code> file pointing at the current branch. And it might be relevant to have a directory listing all existing branches. (For reference, git keeps track of those information in a directory called&nbsp;<code>refs/heads</code>. Look it up!)</p><p><u>Note</u>: If you add some information to your commit objects (to include a reference to one or several parent commit objects maybe...?), be sure to respect the following structure:</p><ul>
+<li>author name</li>
+<li>time of the commit</li>
+<li>1 or several lines with additional information</li>
+<li>an empty line</li>
+<li>the commit message</li>
+</ul>
+
+</div>
+
+</td>
+</tr>
+</tbody></table>
+<div class="d-flex px-5 pb-5">
+<a class="text-dark fs-4" data-scroll="true" data-slug="core-project-84d02d0d-e450-447a-aed3-de5b9ca74fb9" href="https://intra.intek.io/projects/lgit/subject#"><i class="fas fa-arrow-left"></i>
+Core project
+</a><div class="mr-auto"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</main>
+</div>
+<script async="" src="./Intra_files/js"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-112488303-4');</script>
+
+
+
+</body></html>
